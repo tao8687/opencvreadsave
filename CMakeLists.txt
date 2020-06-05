@@ -1,1 +1,16 @@
-cmake_minimum_required(VERSION 2.8.3)#project(yolov2)project(yolov2)#Ìí¼Óc++ 11±ê×¼Ö§³Öset(CMAKE_CXX_FLAGS "-std=c++11")#Ñ°ÕÒOpencv¿âfind_package(OpenCV  REQUIRED)#Ìí¼ÓÍ·ÎÄ¼ş#include_directories("../include" "../ncnn/src/" "../ncnn/build/install/include/")#Ìí¼ÓĞèÒªÁ´½ÓµÄ¿âÎÄ¼şÄ¿Â¼#link_directories(../ ../ncnn/build/install/lib/)#¿ÉÖ´ĞĞÎÄ¼şµÄÃû³ÆºÍÔ´ÎÄ¼şµÄÂ·¾¶add_executable(savevideo savevideo.cpp)#Á´½ÓOpencv¿â#target_link_libraries(savevideo)target_link_libraries(savevideo ${OpenCV_LIBS})
+cmake_minimum_required(VERSION 2.8.3)
+#project(yolov2)
+project(yolov2)
+#æ·»åŠ c++ 11æ ‡å‡†æ”¯æŒ
+set(CMAKE_CXX_FLAGS "-std=c++11")
+#å¯»æ‰¾Opencvåº“
+find_package(OpenCV  REQUIRED)
+#æ·»åŠ å¤´æ–‡ä»¶
+#include_directories("../include" "../ncnn/src/" "../ncnn/build/install/include/")
+#æ·»åŠ éœ€è¦é“¾æ¥çš„åº“æ–‡ä»¶ç›®å½•
+#link_directories(../ ../ncnn/build/install/lib/)
+#å¯æ‰§è¡Œæ–‡ä»¶çš„åç§°å’Œæºæ–‡ä»¶çš„è·¯å¾„
+add_executable(savevideo savevideo.cpp)
+#é“¾æ¥Opencvåº“
+#target_link_libraries(savevideo)
+target_link_libraries(savevideo ${OpenCV_LIBS})
