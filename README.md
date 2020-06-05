@@ -1,6 +1,8 @@
 # opencvreadsave
+
 cmake编译opencv_demo_test
-'''bash
+
+```bash
 mkdir build && cd mkdir
 cmake ..
-'''
+```
