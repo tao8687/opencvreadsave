@@ -8,5 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Free disk space
-      run: cd opencvreadsave
+      run: |
+      cmake ..
       
